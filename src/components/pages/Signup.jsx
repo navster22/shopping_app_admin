@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import apiConnection from '../../apiConnection';
 import Notify from '../common/Notify';
 import { apiEndpoints, httpMethods } from '../../constant';
+import { useNavigate } from 'react-router-dom';
 
 export default function Signup() {
 
@@ -12,6 +13,8 @@ export default function Signup() {
     email: '',
     password: ''
   })
+
+  const navigate = useNavigate();
 
   const [showNotify,setShowNotify] = useState(false)
   const [notifyData,setNotifyData] = useState({
@@ -65,6 +68,9 @@ export default function Signup() {
             </Button>
         </Form>
         <br></br>
+        <Button variant="info" type="submit" onClick={()=>navigate('/login')}>
+          Login
+        </Button>
        { showNotify && <Notify message={notifyData.message} type={notifyData.type} setShowNotify={setShowNotify}/>}
     </div>
   )
