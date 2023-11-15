@@ -5,7 +5,10 @@ export const apiEndpoints = {
     UPLOAD_FILE_ENDPOINT: '/upload',
     ADD_BANNER_ENDPOINT: '/add-banner',
     GET_BANNERS_ENDPOINT: '/get-banners',
-
+    GET_BANNER_ENDPOINT: '/get-banner',
+    UPDATE_BANNER_ENDPOINT: '/update-banner',
+    UPLOAD_PRODUCT_IMAGES_ENDPOINT: '/upload-product-images',
+    ADD_PRODUCT_ENDPOINT: '/add-product'
 }
 
 export const httpMethods = {
