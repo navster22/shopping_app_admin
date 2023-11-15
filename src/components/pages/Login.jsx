@@ -31,9 +31,7 @@ export default function Login() {
         e.preventDefault();
         const data = await apiConnection(apiEndpoints.LOGIN_USER_ENDPOINT,httpMethods.POST,logInFormData)
         if(data.status === 200){
-            // setShowNotify(true)
-            // setNotifyData({...notifyData, message: data.data.message, type: 'success' })
-            navigate('/dashboard')
+            navigate('/dashboard');
         } else {
           setShowNotify(true)
           setNotifyData({...notifyData, message: 'ERROR: Please reload your application', type: 'danger' })

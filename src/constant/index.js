@@ -3,7 +3,9 @@ export const apiEndpoints = {
     LOGIN_USER_ENDPOINT: '/login-user',
     GET_USERS_ENDPOINT: '/get-users',
     UPLOAD_FILE_ENDPOINT: '/upload',
-    ADD_BANNER_ENDPOINT: '/add-banner'
+    ADD_BANNER_ENDPOINT: '/add-banner',
+    GET_BANNERS_ENDPOINT: '/get-banners',
+
 }
 
 export const httpMethods = {
