@@ -11,6 +11,7 @@ import AddBanner from './components/pages/AddBanner';
 import ProtectedRoute from './components/common/ProtectedRoute';
 import EditBanner from './components/pages/EditBanner';
 import AddProduct from './components/pages/AddProduct';
+import EditProduct from './components/pages/EditProduct';
 
 export default function AppRoutes() {
   return (
@@ -25,6 +26,7 @@ export default function AppRoutes() {
             <Route path='/add-banner' element={<AddBanner />} />
             <Route path='/edit-banner' element={<EditBanner />} />
             <Route path='/add-product' element={<AddProduct />} />
+            <Route path='/edit-product' element={<EditProduct />} />
           </Route>
     </Routes>
   );
