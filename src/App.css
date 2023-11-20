@@ -1,6 +1,10 @@
 .App {
 }
 
+.signUp {
+  background: linear-gradient(109.6deg, rgb(6, 183, 249) 11.2%, rgb(25, 74, 236) 91.1%);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
