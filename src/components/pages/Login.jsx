@@ -5,7 +5,7 @@ import apiConnection from '../../apiConnection';
 import { apiEndpoints, httpMethods } from '../../constant';
 import Notify from '../common/Notify';
 import { getCookie, setSession } from '../../utils/getCookie';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
 
@@ -45,23 +45,31 @@ export default function Login() {
 
 
   return (
-    <div className='logIn w-m-25 p-5 border border-dark m-5'>
-        <Form>
+    <div className='logIn'>
+      <div className='d-flex align-items-center justify-content-center' style={{"min-height": "100vh"}}>
+        <div className='p-5 card w-md-50'>
+          <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control name='email' type="email" placeholder="Enter email" onChange={(e) => setFormData(e)}/>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group className="mb-1" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control name='password' type="password" placeholder="Password" onChange={(e) => setFormData(e)}/>
             </Form.Group>
-            <Button variant="primary" type="submit" onClick={(e)=>loginUser(e)}>
+            <Link className="mb-3 d-block" to='/forget-password'>Forget password?</Link>
+            <Button className='w-100' variant="primary" type="submit" onClick={(e)=>loginUser(e)}>
                 Login
             </Button>
-        </Form>
-        <br></br>
+          </Form>
+          <br></br>
+          <Button variant="info" type="submit" onClick={()=>navigate('/signup')}>
+            Signup
+          </Button>
+        </div>
        { showNotify && <Notify message={notifyData.message} type={notifyData.type} setShowNotify={setShowNotify}/>}
+      </div>
     </div>
   )
 }

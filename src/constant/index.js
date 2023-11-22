@@ -12,6 +12,9 @@ export const apiEndpoints = {
     GET_PRODUCTS_ENDPOINT: '/get-products',
     GET_PRODUCT_ENDPOINT: '/get-product',
     UPDATE_PRODUCT_ENDPOINT: '/update-product',
+    VALIDATE_EMAIL_ENDPOINT: '/validate-email',
+    VALIDATE_OTP_ENDPOINT: '/validate-otp',
+    UPDATE_PASSWORD_ENDPOINT: '/reset-password'
 }
 
 export const httpMethods = {

@@ -9,7 +9,7 @@ export default function Notify({message, type, setShowNotify}) {
   },[type])  
   
   return (
-    <div>
+    <div className='position-absolute top-50 start-50 translate-middle'>
         <div className={`alert alert-${type}`} role="alert">
            {message}
         </div>
